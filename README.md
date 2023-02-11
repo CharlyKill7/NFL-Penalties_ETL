@@ -19,7 +19,7 @@ En este proyecto habremos de efectuar un proceso completo de ETL, las siglas en 
 
 ### Restricciones:
 - Obtener la información de tres fuentes distintas (urls).
-- Dos métodos distintos de extracción (csv, excel, api, rss, web scrapping...)
+- Dos métodos distintos de extracción (csv, excel, api, rss, web scrapping...).
 
 ### Objetivo:
  
@@ -30,10 +30,10 @@ Nuestro objetivo es encontrar tres fuents de datos distintas sobre las señaliza
  
 ## Extracción
 
-En primer lugar hemos realizado un ejercicio analítico de cada uno de los siete CSV que nos han proporcionado utilizando las técnicas más comunes como son `.head`,`.tail`,`.info`, `.shape`, `.columns` y `.value_counts`  para obtener información general de cada CSV. El objetivo de esta tarea consiste en verificar que las columnas estén limpias, tengan sentido, y encontrar inconsistencias. Durante este proceso, encontramos las siguientes incongruencias:
+En primer lugar, hemos realizado un ejercicio analítico de numerosas páginas web, incluyendo Kaggle o Google Dataset Search. Al no encontrar ningún dataset que se ajustara al objetivo, ampliamos la búsqueda a cualquier url que pudiera proporcionar la información requerida. Durante este proceso, encontramos las siguientes tablas:
 
 <details>
-<summary>¿ACTRIZ DUPLICADA?</summary>
+<summary>[https://www.nflpenalties.com/]</summary>
 <br>
 
  ![susan](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
@@ -41,27 +41,26 @@ En primer lugar hemos realizado un ejercicio analítico de cada uno de los siete
 </details>
 
 <details>
-<summary>¿RELEASE DATE INCORRECTO?</summary>
+<summary>https://www.pro-football-reference.com/</summary>
 <br>
 
-Notamos que la columna **release_year**, la fecha de estreno de las películas, indica **2006** para todas las pelis.
-<br>
-Pero en las fechas de los alquileres: 
-```
-year = []
-for i in ren.rental_date:
-    year.append(i[0:4])
-set(year) 
-```
-**2005**
-<br>
-<br>
-Al ser todos los alquileres previos a 2006, concluimos que la columna **release_year** está incorrectamente introducida y por tanto la vaciamos.
-
+ ![susan](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
 
 </details>
 
+<details>
+<summary>https://www.profootballnetwork.com/</summary>
 <br>
+
+ ![susan](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
+
+</details>
+
+
+<details>
+<summary>¿RELEASE DATE INCORRECTO?</summary>
+<br>
+
 
 **¿Qué tenemos?**
 
