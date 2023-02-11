@@ -33,10 +33,10 @@ Nuestro objetivo es encontrar tres fuents de datos distintas sobre las señaliza
 En primer lugar, hemos realizado un ejercicio analítico de numerosas páginas web, incluyendo Kaggle o Google Dataset Search. Al no encontrar ningún dataset que se ajustara al objetivo, ampliamos la búsqueda a cualquier url que pudiera proporcionar la información requerida. Durante este proceso, encontramos las siguientes tablas:
 
 <details>
-<summary>[https://www.nflpenalties.com/]</summary>
+<summary>https://www.nflpenalties.com/</summary>
 <br>
 
- ![susan](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
+ ![nflpenalties](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
 
 </details>
 
@@ -44,7 +44,7 @@ En primer lugar, hemos realizado un ejercicio analítico de numerosas páginas w
 <summary>https://www.pro-football-reference.com/</summary>
 <br>
 
- ![susan](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
+ ![profootballreference](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
 
 </details>
 
@@ -52,18 +52,15 @@ En primer lugar, hemos realizado un ejercicio analítico de numerosas páginas w
 <summary>https://www.profootballnetwork.com/</summary>
 <br>
 
- ![susan](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
+ ![profootballnetwork](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
 
 </details>
 
 
-<details>
-<summary>¿RELEASE DATE INCORRECTO?</summary>
-<br>
 
+**Proceso de extracción**
 
-**¿Qué tenemos?**
-
+Para la primera url, el proceso de extracción consistió en hacer web scrapping, utilizando la librería selenium. Tras conseguir tanto los nombres de columna como los datos, mediante la librería pandas generamos nuestro DataFrame principal. A partir de este, la idea fue extraer datos que pudieran complementar los ya existentes.
 
 Explorando la tabla **INVENTORY** vimos que había mil películas inventariadas, y a través de **film_id** descubrimos que se correspondían con las primeras **223** películas de la tabla **FILMS**. En otras palabras, en nuestro inventario **sólo había películas con títulos de la ‘A’ a la ‘D’**. Esto nos hizo sospechar que tal vez la información estuviera incompleta.
 
