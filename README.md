@@ -4,10 +4,10 @@
 
 ## ⛓️ Índice
 
-1. [Descripción](#descripción)\
-2. [Extracción](#extracción)\
-3. [Transformación](#transformación)\
-4. [Carga](#carga)\
+1. [Descripción](#descripción)
+2. [Extracción](#extracción)
+3. [Transformación](#transformación)
+4. [Carga](#carga)
 5. [BONUS: Consultas y conclusión](#consultas)
 
 
