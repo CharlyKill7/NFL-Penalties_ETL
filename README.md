@@ -15,18 +15,16 @@
 
 ## Descripción del proyecto
 
-En este proyecto tenemos que limpiar siete .csv provenientes de un negocio de videoclub, y adaptar las tablas para su exportación a MySQL, con el fin de generar una nueva base de datos mucho más óptima.
+En este proyecto habremos de efectuar un proceso completo de ETL, las siglas en inglés de Extract, Transform y Load. Los datos a extraer serán de nuestra elección, pero habrá que cumplir ciertos requerimientos. En este caso, vamos a extraer datos y hacer un pequeño análisis acerca de las decisiones arbitrales en la NFL.
 
- 12 columnas describiendo los atributos más importantes de cada CD, desde el nombre de la película, hasta el lenguaje, el contenido adicional y los costes de alquiler.
+### Restricciones:
+- Obtener la información de tres fuentes distintas (urls).
+- Dos métodos distintos de extracción (csv, excel, api, rss, web scrapping...)
+
+### Objetivo:
  
+Nuestro objetivo es encontrar tres fuents de datos distintas sobre las señalizaciones arbitrales en la NFL, de tal modo que podamos generar un DataFrame rico y completo a través de cual podamos sacar conclusiones al respecto. En este sentido, trabajaremos en la transformación del dato crudo para su adaptación al resto de las fuentes, con el fin de establecer una base de datos SQL con los resultados, pudiendo lanzar queries que nos ayuden a confirmar o refutar las hipótesis que se nos ocurran.
 
- ### Objetivo:
- 
-Nuestro objetivo es construir y proporcionar al cliente una base de datos consistente pero sencilla de manejar, intentando que las diferentes tablas finales se correspondan con las fichas operativas del negocio. Así, según la parcela de actividad que se esté realizando, el personal encargado podrá rellenar todos los datos de la misma en una única tabla.
-
-
-Gracias a las relaciones establecidas entre las tablas, el cliente podrá ejecutar una serie de consultas para obtener información relevante y actualizada del videoclub.
- 
  
  <a name="extracción"/>
  
