@@ -1,0 +1,230 @@
+,Penalty,Against,Beneficiary,Pos,Ref Crew,Quarter,Time left,Down,Distance,Yards,Home,Phase,Winner,Loser,Prime Time
+0,False Start,LAR,BUF,OL,Carl Cheffers,1,568,2,5,5,Yes,Offense,BUF,LAR,YES
+1,Horse Collar Tackle,LAR,BUF,LB,Carl Cheffers,1,113,1,10,15,Yes,Defense,BUF,LAR,YES
+2,Defensive Holding,BUF,LAR,DL,Carl Cheffers,2,440,1,10,5,No,Defense,BUF,LAR,YES
+3,Defensive Too Many Men on Field,LAR,BUF,NP,Carl Cheffers,2,136,3,12,5,Yes,Defense,BUF,LAR,YES
+4,Defensive Holding,BUF,LAR,DB,Carl Cheffers,2,105,3,10,5,No,Defense,BUF,LAR,YES
+5,False Start,BUF,LAR,OL,Carl Cheffers,3,651,3,2,5,No,Offense,BUF,LAR,YES
+6,False Start,BUF,LAR,OL,Carl Cheffers,3,311,1,10,5,No,Offense,BUF,LAR,YES
+7,False Start,LAR,BUF,WR,Carl Cheffers,4,557,2,10,5,Yes,Offense,BUF,LAR,YES
+8,Taunting,BUF,LAR,DB,Carl Cheffers,4,426,1,10,15,No,Defense,BUF,LAR,YES
+9,Ineligible Downfield Pass,ATL,NO,OL,Alex Kemp,1,654,3,5,0,Yes,Offense,NO,ATL,NO
+10,Delay of Game,NO,ATL,NP,Alex Kemp,1,344,0,0,5,No,Special Teams,NO,ATL,NO
+11,Neutral Zone Infraction,NO,ATL,DL,Alex Kemp,1,123,1,10,5,No,Defense,NO,ATL,NO
+12,Offensive Holding,ATL,NO,OL,Alex Kemp,2,522,2,10,10,Yes,Offense,NO,ATL,NO
+13,Defensive Offside,ATL,NO,DL,Alex Kemp,2,372,2,4,5,Yes,Defense,NO,ATL,NO
+14,Unnecessary Roughness,NO,ATL,LB,Alex Kemp,2,227,1,10,15,No,Defense,NO,ATL,NO
+15,Defensive Pass Interference,NO,ATL,DB,Alex Kemp,3,418,1,10,39,No,Defense,NO,ATL,NO
+16,Offensive Holding,ATL,NO,OL,Alex Kemp,3,101,1,10,10,Yes,Offense,NO,ATL,NO
+17,Defensive Holding,NO,ATL,DB,Alex Kemp,3,81,1,20,5,No,Defense,NO,ATL,NO
+18,False Start,ATL,NO,TE,Alex Kemp,4,775,2,4,5,Yes,Offense,NO,ATL,NO
+19,Offensive Holding,ATL,NO,OL,Alex Kemp,4,771,3,9,0,Yes,Offense,NO,ATL,NO
+20,Delay of Game,ATL,NO,NP,Alex Kemp,4,432,4,2,5,Yes,Special Teams,NO,ATL,NO
+21,Defensive Offside,ATL,NO,LB,Alex Kemp,4,251,1,10,5,Yes,Defense,NO,ATL,NO
+22,Illegal Shift,NO,ATL,TE,Alex Kemp,4,218,0,0,0,No,Offense,NO,ATL,NO
+23,Defensive Holding,NO,ATL,DB,Alex Kemp,4,119,3,6,5,No,Defense,NO,ATL,NO
+24,Delay of Game,ATL,NO,NP,Alex Kemp,4,54,4,1,5,Yes,Special Teams,NO,ATL,NO
+25,Offensive Holding,ATL,NO,LS,Alex Kemp,4,54,4,6,10,Yes,Special Teams,NO,ATL,NO
+26,Intentional Grounding,NO,ATL,QB,Alex Kemp,4,38,1,10,10,No,Offense,NO,ATL,NO
+27,Unnecessary Roughness,NO,ATL,DB,Alex Kemp,4,6,1,10,15,No,Defense,NO,ATL,NO
+28,Offensive Holding,CAR,CLE,TE,Brad Rogers,1,526,2,6,10,Yes,Offense,CLE,CAR,NO
+29,Offensive Holding,CLE,CAR,OL,Brad Rogers,1,405,1,10,10,No,Offense,CLE,CAR,NO
+30,Defensive Holding,CAR,CLE,DB,Brad Rogers,1,304,3,5,5,Yes,Defense,CLE,CAR,NO
+31,Delay of Game,CAR,CLE,NP,Brad Rogers,1,71,3,5,5,Yes,Offense,CLE,CAR,NO
+32,Roughing the Passer,CLE,CAR,DL,Brad Rogers,1,71,3,10,15,No,Defense,CLE,CAR,NO
+33,Unsportsmanlike Conduct,CAR,CLE,NP,Brad Rogers,1,35,3,7,7,Yes,Offense,CLE,CAR,NO
+34,Defensive Pass Interference,CAR,CLE,DB,Brad Rogers,2,662,3,3,34,Yes,Defense,CLE,CAR,NO
+35,False Start,CLE,CAR,NP,Brad Rogers,2,77,3,8,5,No,Offense,CLE,CAR,NO
+36,Low Block,CAR,CLE,DB,Brad Rogers,2,77,3,13,15,Yes,Defense,CLE,CAR,NO
+37,Illegal Formation,CLE,CAR,DB,Brad Rogers,2,21,0,0,5,No,Special Teams,CLE,CAR,NO
+38,Delay of Game,CLE,CAR,NP,Brad Rogers,3,531,2,6,5,No,Offense,CLE,CAR,NO
+39,Defensive Pass Interference,CLE,CAR,DB,Brad Rogers,3,419,2,6,6,No,Defense,CLE,CAR,NO
+40,Delay of Game,CLE,CAR,NP,Brad Rogers,3,179,4,2,5,No,Offense,CLE,CAR,NO
+41,Ineligible Downfield Pass,CLE,CAR,OL,Brad Rogers,4,362,1,10,5,No,Offense,CLE,CAR,NO
+42,Defensive Holding,CAR,CLE,DB,Brad Rogers,4,162,2,8,5,Yes,Defense,CLE,CAR,NO
+43,Horse Collar Tackle,CLE,CAR,DB,Brad Rogers,4,96,2,6,15,No,Defense,CLE,CAR,NO
+44,Roughing the Passer,CAR,CLE,DL,Brad Rogers,4,73,1,10,15,Yes,Defense,CLE,CAR,NO
+45,False Start,SF,CHI,RB,Clay Martin,1,774,2,3,5,No,Offense,CHI,SF,NO
+46,Ineligible Downfield Kick,SF,CHI,LS,Clay Martin,1,312,4,13,5,No,Special Teams,CHI,SF,NO
+47,Unnecessary Roughness,SF,CHI,LB,Clay Martin,1,259,2,2,15,No,Defense,CHI,SF,NO
+48,False Start,CHI,SF,LB,Clay Martin,1,139,4,14,5,Yes,Special Teams,CHI,SF,NO
+49,Neutral Zone Infraction,CHI,SF,DL,Clay Martin,2,660,3,3,4,Yes,Defense,CHI,SF,NO
+50,Offensive Pass Interference,SF,CHI,WR,Clay Martin,2,446,3,3,10,No,Offense,CHI,SF,NO
+51,Defensive Offside,SF,CHI,DL,Clay Martin,2,221,1,10,5,No,Defense,CHI,SF,NO
+52,Unsportsmanlike Conduct,CHI,SF,P,Clay Martin,2,32,4,6,15,Yes,Special Teams,CHI,SF,NO
+53,Face Mask,SF,CHI,LB,Clay Martin,3,414,3,4,15,No,Defense,CHI,SF,NO
+54,Ineligible Downfield Pass,SF,CHI,OL,Clay Martin,3,156,2,9,0,No,Offense,CHI,SF,NO
+55,Defensive Holding,SF,CHI,DB,Clay Martin,3,12,3,9,5,No,Defense,CHI,SF,NO
+56,Unnecessary Roughness,SF,CHI,LB,Clay Martin,4,817,3,1,15,No,Defense,CHI,SF,NO
+57,False Start,SF,CHI,OL,Clay Martin,4,760,2,10,5,No,Offense,CHI,SF,NO
+58,Defensive Holding,SF,CHI,DL,Clay Martin,4,502,2,11,4,No,Defense,CHI,SF,NO
+59,Offensive Holding,SF,CHI,RB,Clay Martin,4,441,0,0,10,No,Special Teams,CHI,SF,NO
+60,False Start,SF,CHI,OL,Clay Martin,4,297,1,10,5,No,Offense,CHI,SF,NO
+61,Delay of Game,CHI,SF,QB,Clay Martin,4,157,4,10,0,Yes,Offense,CHI,SF,NO
+62,False Start,CIN,PIT,TE,Shawn Hochuli,1,347,1,10,5,Yes,Offense,PIT,CIN,NO
+63,Defensive Pass Interference,PIT,CIN,DB,Shawn Hochuli,1,270,3,5,3,No,Defense,PIT,CIN,NO
+64,Defensive Pass Interference,CIN,PIT,DB,Shawn Hochuli,2,575,3,3,2,Yes,Defense,PIT,CIN,NO
+65,Unnecessary Roughness,PIT,CIN,DB,Shawn Hochuli,2,333,1,10,7,No,Defense,PIT,CIN,NO
+66,False Start,CIN,PIT,OL,Shawn Hochuli,2,27,2,3,5,Yes,Offense,PIT,CIN,NO
+67,Offensive Holding,PIT,CIN,OL,Shawn Hochuli,3,79,3,6,10,No,Offense,PIT,CIN,NO
+68,Defensive Offside,PIT,CIN,LB,Shawn Hochuli,4,578,2,8,0,No,Defense,PIT,CIN,NO
+69,Offensive Holding,PIT,CIN,LS,Shawn Hochuli,4,373,4,4,10,No,Special Teams,PIT,CIN,NO
+70,Defensive Holding,PIT,CIN,DB,Shawn Hochuli,4,228,3,11,6,No,Defense,PIT,CIN,NO
+71,Taunting,CIN,PIT,WR,Shawn Hochuli,4,116,4,2,15,Yes,Offense,PIT,CIN,NO
+72,Illegal Use of Hands,PIT,CIN,LB,Shawn Hochuli,4,22,2,10,5,No,Defense,PIT,CIN,NO
+73,Unnecessary Roughness,PIT,CIN,DB,Shawn Hochuli,4,13,2,10,6,No,Defense,PIT,CIN,NO
+74,Defensive Pass Interference,PIT,CIN,DB,Shawn Hochuli,5,501,1,10,12,No,Defense,PIT,CIN,NO
+75,Defensive Offside,CIN,PIT,DL,Shawn Hochuli,5,34,3,1,0,Yes,Defense,PIT,CIN,NO
+76,False Start,DET,PHI,OL,Brad Allen,1,739,2,10,5,Yes,Offense,PHI,DET,NO
+77,False Start,DET,PHI,OL,Brad Allen,1,739,2,15,5,Yes,Offense,PHI,DET,NO
+78,False Start,PHI,DET,TE,Brad Allen,1,522,3,10,5,No,Offense,PHI,DET,NO
+79,False Start,PHI,DET,WR,Brad Allen,1,351,1,10,5,No,Offense,PHI,DET,NO
+80,Offensive Holding,PHI,DET,OL,Brad Allen,1,283,1,10,10,No,Offense,PHI,DET,NO
+81,Offensive Too Many Men on Field,PHI,DET,NP,Brad Allen,2,617,3,1,5,No,Offense,PHI,DET,NO
+82,Delay of Game,PHI,DET,NP,Brad Allen,2,472,2,6,5,No,Offense,PHI,DET,NO
+83,Defensive Too Many Men on Field,DET,PHI,NP,Brad Allen,2,472,2,11,5,Yes,Defense,PHI,DET,NO
+84,Offensive Holding,DET,PHI,TE,Brad Allen,2,420,2,6,10,Yes,Offense,PHI,DET,NO
+85,Unnecessary Roughness,DET,PHI,LB,Brad Allen,3,694,1,10,15,Yes,Defense,PHI,DET,NO
+86,Neutral Zone Infraction,PHI,DET,DL,Brad Allen,3,469,3,8,5,No,Defense,PHI,DET,NO
+87,Unnecessary Roughness,DET,PHI,DB,Brad Allen,3,165,3,4,0,Yes,Defense,PHI,DET,NO
+88,Disqualification,DET,PHI,DB,Brad Allen,3,165,3,4,15,Yes,Defense,PHI,DET,NO
+89,Defensive Holding,PHI,DET,LB,Brad Allen,3,27,1,10,5,No,Defense,PHI,DET,NO
+90,Delay of Game,PHI,DET,NP,Brad Allen,4,779,2,7,5,No,Offense,PHI,DET,NO
+91,Defensive Pass Interference,DET,PHI,DB,Brad Allen,4,554,3,10,0,Yes,Defense,PHI,DET,NO
+92,Ineligible Downfield Pass,PHI,DET,OL,Brad Allen,4,554,3,10,0,No,Offense,PHI,DET,NO
+93,Offensive Holding,DET,PHI,DB,Brad Allen,4,511,4,8,10,Yes,Special Teams,PHI,DET,NO
+94,Defensive Pass Interference,PHI,DET,DB,Brad Allen,4,288,3,10,11,No,Defense,PHI,DET,NO
+95,Offensive Too Many Men on Field,PHI,DET,NP,Brad Allen,4,50,1,10,5,No,Offense,PHI,DET,NO
+96,Defensive Pass Interference,IND,HOU,DB,Land Clark,2,168,2,13,33,No,Defense,HOU,IND,NO
+97,Neutral Zone Infraction,HOU,IND,DL,Land Clark,2,97,2,7,5,Yes,Defense,HOU,IND,NO
+98,False Start,IND,HOU,OL,Land Clark,2,48,3,13,5,No,Offense,HOU,IND,NO
+99,Defensive Holding,HOU,IND,DL,Land Clark,3,737,1,10,5,Yes,Defense,HOU,IND,NO
+100,Ineligible Downfield Pass,IND,HOU,OL,Land Clark,3,624,2,10,5,No,Offense,HOU,IND,NO
+101,Unnecessary Roughness,HOU,IND,DB,Land Clark,3,593,2,15,15,Yes,Defense,HOU,IND,NO
+102,Roughing the Passer,IND,HOU,DL,Land Clark,3,503,2,5,15,No,Defense,HOU,IND,NO
+103,Running Into the Kicker,IND,HOU,LB,Land Clark,3,278,4,4,5,No,Special Teams,HOU,IND,NO
+104,Defensive Pass Interference,IND,HOU,DB,Land Clark,3,158,1,10,21,No,Defense,HOU,IND,NO
+105,Delay of Game,HOU,IND,NP,Land Clark,4,896,4,3,5,Yes,Offense,HOU,IND,NO
+106,Delay of Game,IND,HOU,NP,Land Clark,4,647,4,4,5,No,Special Teams,HOU,IND,NO
+107,Illegal Shift,HOU,IND,NP,Land Clark,4,284,3,8,0,Yes,Offense,HOU,IND,NO
+108,Illegal Shift,HOU,IND,WR,Land Clark,5,554,2,17,0,Yes,Offense,HOU,IND,NO
+109,False Start,HOU,IND,OL,Land Clark,5,550,3,17,5,Yes,Offense,HOU,IND,NO
+110,False Start,HOU,IND,OL,Land Clark,5,88,2,2,5,Yes,Offense,HOU,IND,NO
+111,Neutral Zone Infraction,NE,MIA,DL,John Hussey,1,408,4,1,5,No,Defense,MIA,NE,NO
+112,False Start,NE,MIA,TE,John Hussey,1,108,3,6,5,No,Offense,MIA,NE,NO
+113,False Start,MIA,NE,TE,John Hussey,2,124,1,10,5,Yes,Offense,MIA,NE,NO
+114,Defensive Too Many Men on Field,MIA,NE,NP,John Hussey,3,547,2,4,5,Yes,Defense,MIA,NE,NO
+115,Illegal Contact,MIA,NE,DB,John Hussey,3,424,4,1,5,Yes,Defense,MIA,NE,NO
+116,Roughing the Passer,MIA,NE,DB,John Hussey,4,785,3,6,0,Yes,Defense,MIA,NE,NO
+117,Chop Block,NE,MIA,WR,John Hussey,4,785,3,6,0,No,Offense,MIA,NE,NO
+118,Offensive Holding,NE,MIA,OL,John Hussey,4,586,4,3,0,No,Offense,MIA,NE,NO
+119,Delay of Game,MIA,NE,NP,John Hussey,4,366,4,15,5,Yes,Special Teams,MIA,NE,NO
+120,Defensive Too Many Men on Field,NE,MIA,NP,John Hussey,4,65,3,2,5,No,Defense,MIA,NE,NO
+121,Intentional Grounding,NYJ,BAL,QB,Craig Wrolstad,1,841,3,5,10,Yes,Offense,BAL,NYJ,NO
+122,Illegal Contact,BAL,NYJ,DB,Craig Wrolstad,1,511,3,9,5,No,Defense,BAL,NYJ,NO
+123,Offensive Holding,NYJ,BAL,WR,Craig Wrolstad,1,321,1,10,10,Yes,Offense,BAL,NYJ,NO
+124,Defensive Pass Interference,NYJ,BAL,DB,Craig Wrolstad,2,281,1,10,32,Yes,Defense,BAL,NYJ,NO
+125,Illegal Contact,BAL,NYJ,DB,Craig Wrolstad,3,390,3,9,5,No,Defense,BAL,NYJ,NO
+126,Offensive Holding,NYJ,BAL,DL,Craig Wrolstad,3,126,0,0,9,Yes,Special Teams,BAL,NYJ,NO
+127,Offensive Holding,BAL,NYJ,TE,Craig Wrolstad,4,797,2,2,10,No,Offense,BAL,NYJ,NO
+128,Offensive Holding,NYJ,BAL,OL,Craig Wrolstad,4,428,1,10,10,Yes,Offense,BAL,NYJ,NO
+129,Offensive Holding,BAL,NYJ,WR,Craig Wrolstad,4,257,1,10,4,No,Offense,BAL,NYJ,NO
+130,Defensive Holding,BAL,NYJ,DB,Craig Wrolstad,4,127,3,5,5,No,Defense,BAL,NYJ,NO
+131,Offensive Pass Interference,NYJ,BAL,WR,Craig Wrolstad,4,82,4,5,10,Yes,Offense,BAL,NYJ,NO
+132,Illegal Contact,WAS,JAC,DB,Tra Blake,1,900,1,10,5,Yes,Defense,WAS,JAC,NO
+133,Illegal Shift,JAC,WAS,NP,Tra Blake,1,896,1,10,5,No,Offense,WAS,JAC,NO
+134,Defensive Holding,WAS,JAC,DB,Tra Blake,1,876,1,15,0,Yes,Defense,WAS,JAC,NO
+135,Intentional Grounding,JAC,WAS,QB,Tra Blake,1,352,1,10,10,No,Offense,WAS,JAC,NO
+136,Neutral Zone Infraction,JAC,WAS,LB,Tra Blake,1,124,3,11,6,No,Defense,WAS,JAC,NO
+137,Roughing the Passer,JAC,WAS,DL,Tra Blake,2,761,3,10,11,No,Defense,WAS,JAC,NO
+138,Illegal Formation,JAC,WAS,NP,Tra Blake,2,547,1,10,5,No,Offense,WAS,JAC,NO
+139,Illegal Contact,WAS,JAC,DB,Tra Blake,2,510,2,15,5,Yes,Defense,WAS,JAC,NO
+140,Defensive Pass Interference,WAS,JAC,DB,Tra Blake,2,479,1,10,21,Yes,Defense,WAS,JAC,NO
+141,False Start,JAC,WAS,OL,Tra Blake,2,37,1,9,5,No,Offense,WAS,JAC,NO
+142,Defensive Too Many Men on Field,JAC,WAS,NP,Tra Blake,3,510,2,9,6,No,Defense,WAS,JAC,NO
+143,Unnecessary Roughness,WAS,JAC,DB,Tra Blake,3,215,2,3,15,Yes,Defense,WAS,JAC,NO
+144,Offensive Holding,JAC,WAS,OL,Tra Blake,3,185,1,10,10,No,Offense,WAS,JAC,NO
+145,Defensive Offside,JAC,WAS,DL,Tra Blake,3,76,1,10,5,No,Defense,WAS,JAC,NO
+146,Intentional Grounding,JAC,WAS,QB,Tra Blake,4,780,1,10,12,No,Offense,WAS,JAC,NO
+147,Illegal Use of Hands,WAS,JAC,NP,Tra Blake,4,576,0,0,0,Yes,Offense,WAS,JAC,NO
+148,Illegal Use of Hands,WAS,JAC,OL,Tra Blake,4,408,1,10,5,Yes,Offense,WAS,JAC,NO
+149,Defensive Holding,JAC,WAS,LB,Tra Blake,4,380,1,15,5,No,Defense,WAS,JAC,NO
+150,Defensive Pass Interference,WAS,JAC,DB,Tra Blake,4,94,2,2,12,Yes,Defense,WAS,JAC,NO
+151,False Start,JAC,WAS,OL,Tra Blake,4,90,1,10,5,No,Offense,WAS,JAC,NO
+152,Neutral Zone Infraction,JAC,WAS,DL,Tra Blake,4,60,3,3,5,No,Defense,WAS,JAC,NO
+153,Illegal Shift,ARI,KC,NP,Scott Novak,1,577,1,10,0,Yes,Offense,KC,ARI,NO
+154,Illegal Block Above the Waist,KC,ARI,DB,Scott Novak,1,481,4,8,10,No,Special Teams,KC,ARI,NO
+155,Roughing the Passer,ARI,KC,DL,Scott Novak,1,427,2,7,15,Yes,Defense,KC,ARI,NO
+156,Defensive Offside,ARI,KC,DL,Scott Novak,1,427,2,7,0,Yes,Defense,KC,ARI,NO
+157,Defensive Offside,ARI,KC,DL,Scott Novak,1,265,2,3,5,Yes,Defense,KC,ARI,NO
+158,Unnecessary Roughness,ARI,KC,DB,Scott Novak,2,634,3,2,15,Yes,Defense,KC,ARI,NO
+159,False Start,ARI,KC,OL,Scott Novak,3,836,1,10,5,Yes,Offense,KC,ARI,NO
+160,Defensive Pass Interference,ARI,KC,DB,Scott Novak,3,607,1,10,9,Yes,Defense,KC,ARI,NO
+161,Ineligible Downfield Pass,KC,ARI,OL,Scott Novak,3,314,2,3,5,No,Offense,KC,ARI,NO
+162,Offensive Holding,KC,ARI,LB,Scott Novak,4,311,0,0,10,No,Special Teams,KC,ARI,NO
+163,Unnecessary Roughness,LV,LAC,DB,Shawn Smith,2,608,3,4,1,No,Defense,LAC,LV,NO
+164,Offensive Holding,LV,LAC,OL,Shawn Smith,2,453,3,7,0,No,Offense,LAC,LV,NO
+165,Offensive Holding,LAC,LV,TE,Shawn Smith,2,349,1,10,10,Yes,Offense,LAC,LV,NO
+166,False Start,LAC,LV,TE,Shawn Smith,2,149,2,7,5,Yes,Offense,LAC,LV,NO
+167,False Start,LV,LAC,OL,Shawn Smith,3,138,2,20,5,No,Offense,LAC,LV,NO
+168,False Start,LAC,LV,OL,Shawn Smith,4,753,3,11,0,Yes,Offense,LAC,LV,NO
+169,Defensive Pass Interference,LAC,LV,DB,Shawn Smith,4,272,0,0,1,Yes,Defense,LAC,LV,NO
+170,False Start,LV,LAC,OL,Shawn Smith,4,272,0,0,5,No,Offense,LAC,LV,NO
+171,Illegal Formation,LAC,LV,NP,Shawn Smith,4,58,1,10,5,Yes,Offense,LAC,LV,NO
+172,Delay of Game,MIN,GB,NP,Bill Vinovich,2,237,4,2,5,Yes,Special Teams,MIN,GB,NO
+173,Running Into the Kicker,GB,MIN,LB,Bill Vinovich,2,13,4,9,0,No,Special Teams,MIN,GB,NO
+174,Offensive Pass Interference,MIN,GB,WR,Bill Vinovich,3,645,3,5,10,Yes,Offense,MIN,GB,NO
+175,Neutral Zone Infraction,GB,MIN,LB,Bill Vinovich,3,283,2,10,5,No,Defense,MIN,GB,NO
+176,Delay of Game,MIN,GB,NP,Bill Vinovich,3,176,2,11,5,Yes,Offense,MIN,GB,NO
+177,False Start,GB,MIN,LB,Bill Vinovich,4,726,4,12,5,No,Special Teams,MIN,GB,NO
+178,Defensive Offside,MIN,GB,LB,Bill Vinovich,4,248,3,5,0,Yes,Defense,MIN,GB,NO
+179,Illegal Use of Hands,GB,MIN,OL,Bill Vinovich,4,230,4,1,0,No,Offense,MIN,GB,NO
+180,Offensive Holding,NYG,TEN,TE,Jerome Boger,1,469,2,8,0,No,Offense,NYG,TEN,NO
+181,Delay of Game,NYG,TEN,NP,Jerome Boger,1,437,3,14,5,No,Offense,NYG,TEN,NO
+182,Defensive Holding,NYG,TEN,DB,Jerome Boger,2,566,3,6,5,No,Defense,NYG,TEN,NO
+183,Offensive Holding,NYG,TEN,OL,Jerome Boger,2,24,1,10,10,No,Offense,NYG,TEN,NO
+184,Illegal Use of Hands,TEN,NYG,DL,Jerome Boger,3,699,2,1,5,Yes,Defense,NYG,TEN,NO
+185,Offensive Holding,TEN,NYG,WR,Jerome Boger,3,676,0,0,10,Yes,Special Teams,NYG,TEN,NO
+186,Offensive Holding,TEN,NYG,OL,Jerome Boger,3,456,1,10,10,Yes,Offense,NYG,TEN,NO
+187,Delay of Game,TEN,NYG,NP,Jerome Boger,3,266,1,10,5,Yes,Offense,NYG,TEN,NO
+188,Defensive Pass Interference,NYG,TEN,DB,Jerome Boger,3,207,2,10,5,No,Defense,NYG,TEN,NO
+189,Offensive Holding,TEN,NYG,OL,Jerome Boger,3,202,1,10,10,Yes,Offense,NYG,TEN,NO
+190,False Start,TEN,NYG,OL,Jerome Boger,3,42,1,10,5,Yes,Offense,NYG,TEN,NO
+191,False Start,NYG,TEN,OL,Jerome Boger,4,785,2,6,5,No,Offense,NYG,TEN,NO
+192,Illegal Formation,NYG,TEN,NP,Jerome Boger,4,66,0,0,5,No,Special Teams,NYG,TEN,NO
+193,False Start,TEN,NYG,OL,Jerome Boger,4,66,1,10,5,Yes,Offense,NYG,TEN,NO
+194,Defensive Holding,NYG,TEN,LB,Jerome Boger,4,41,3,4,5,No,Defense,NYG,TEN,NO
+195,Defensive Holding,NYG,TEN,DB,Jerome Boger,4,29,3,4,5,No,Defense,NYG,TEN,NO
+196,False Start,TB,DAL,TE,Ron Torbert,1,542,1,10,5,No,Offense,TB,DAL,YES
+197,False Start,DAL,TB,OL,Ron Torbert,1,268,2,3,5,Yes,Offense,TB,DAL,YES
+198,Offensive Holding,DAL,TB,RB,Ron Torbert,1,66,0,0,10,Yes,Special Teams,TB,DAL,YES
+199,Offensive Pass Interference,DAL,TB,WR,Ron Torbert,2,451,1,10,10,Yes,Offense,TB,DAL,YES
+200,False Start,DAL,TB,OL,Ron Torbert,2,200,1,10,5,Yes,Offense,TB,DAL,YES
+201,False Start,TB,DAL,OL,Ron Torbert,3,778,3,8,5,No,Offense,TB,DAL,YES
+202,Running Into the Kicker,DAL,TB,DL,Ron Torbert,3,750,4,13,5,Yes,Special Teams,TB,DAL,YES
+203,Ineligible Downfield Pass,DAL,TB,OL,Ron Torbert,3,656,1,10,5,Yes,Offense,TB,DAL,YES
+204,Defensive Offside,TB,DAL,LB,Ron Torbert,3,160,3,16,5,No,Defense,TB,DAL,YES
+205,False Start,DAL,TB,OL,Ron Torbert,3,87,2,5,5,Yes,Offense,TB,DAL,YES
+206,False Start,DAL,TB,OL,Ron Torbert,3,31,1,10,5,Yes,Offense,TB,DAL,YES
+207,Offensive Holding,DAL,TB,OL,Ron Torbert,4,900,2,6,10,Yes,Offense,TB,DAL,YES
+208,False Start,TB,DAL,DB,Ron Torbert,4,428,4,3,5,No,Special Teams,TB,DAL,YES
+209,Defensive Offside,TB,DAL,LB,Ron Torbert,4,301,4,6,5,No,Defense,TB,DAL,YES
+210,Intentional Grounding,DAL,TB,QB,Ron Torbert,4,120,1,10,13,Yes,Offense,TB,DAL,YES
+211,False Start,SEA,DEN,OL,Clete Blakeman,1,782,1,10,5,Yes,Offense,SEA,DEN,YES
+212,False Start,DEN,SEA,OL,Clete Blakeman,1,505,2,10,5,No,Offense,SEA,DEN,YES
+213,Defensive Pass Interference,DEN,SEA,DB,Clete Blakeman,1,408,1,10,21,No,Defense,SEA,DEN,YES
+214,Unnecessary Roughness,DEN,SEA,DB,Clete Blakeman,1,400,1,10,15,No,Defense,SEA,DEN,YES
+215,False Start,DEN,SEA,OL,Clete Blakeman,1,9,1,10,5,No,Offense,SEA,DEN,YES
+216,Illegal Formation,DEN,SEA,OL,Clete Blakeman,2,809,3,12,0,No,Offense,SEA,DEN,YES
+217,Taunting,DEN,SEA,LB,Clete Blakeman,2,688,1,10,15,No,Defense,SEA,DEN,YES
+218,Illegal Contact,DEN,SEA,DL,Clete Blakeman,2,613,1,10,5,No,Defense,SEA,DEN,YES
+219,Offensive Holding,SEA,DEN,OL,Clete Blakeman,2,554,2,8,10,Yes,Offense,SEA,DEN,YES
+220,Defensive Holding,DEN,SEA,DL,Clete Blakeman,2,290,2,7,5,No,Defense,SEA,DEN,YES
+221,Delay of Game,DEN,SEA,NP,Clete Blakeman,3,648,2,9,5,No,Offense,SEA,DEN,YES
+222,Defensive Pass Interference,SEA,DEN,DB,Clete Blakeman,3,628,2,14,31,Yes,Defense,SEA,DEN,YES
+223,Delay of Game,DEN,SEA,NP,Clete Blakeman,3,571,2,6,5,No,Offense,SEA,DEN,YES
+224,Defensive Holding,DEN,SEA,DB,Clete Blakeman,3,425,3,9,5,No,Defense,SEA,DEN,YES
+225,Roughing the Passer,DEN,SEA,LB,Clete Blakeman,3,421,1,10,15,No,Defense,SEA,DEN,YES
+226,Defensive Pass Interference,SEA,DEN,DB,Clete Blakeman,3,285,3,3,21,Yes,Defense,SEA,DEN,YES
+227,Offensive Holding,SEA,DEN,OL,Clete Blakeman,3,72,2,6,10,Yes,Offense,SEA,DEN,YES
+228,False Start,DEN,SEA,WR,Clete Blakeman,4,388,2,3,5,No,Offense,SEA,DEN,YES
