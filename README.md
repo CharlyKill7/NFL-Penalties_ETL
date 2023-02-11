@@ -1,27 +1,21 @@
-# W3 Project - Building mySQL Data-base
+# W3 Project - ETL NFL Penalties
 
 ![portada](https://github.com/CharlyKill7/Database-Project/blob/main/images/videoclub.jpg)
 
 ## ⛓️ Índice
 
-1.[✍️ Descripción](#descripción)\
-2.[🤓 Análisis general y limpieza](#análisis)\
-3.[🗂️ Database](#database)\
-4.[🧬 Transformación](#transformación)\
-5.[📊 BONUS: Consultas](#consultas)
+1.[Descripción](#descripción)\
+2.[Extracción](#extracción)\
+3.[Transformación](#transformación)\
+4.[Cargar](#cargar)\
+5.[📊 BONUS: Consultas y conclusión](#consultas)
 
 
 <a name="descripción"/>
 
-## ✍️ Descripción
+## Descripción del proyecto
 
 En este proyecto tenemos que limpiar siete .csv provenientes de un negocio de videoclub, y adaptar las tablas para su exportación a MySQL, con el fin de generar una nueva base de datos mucho más óptima.
-
-**Las tablas que tenemos inicialmente:**
-
-<details>
-<summary>FILM</summary>
-<br>
 
  12 columnas describiendo los atributos más importantes de cada CD, desde el nombre de la película, hasta el lenguaje, el contenido adicional y los costes de alquiler.
  
