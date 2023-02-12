@@ -178,7 +178,7 @@ En esta tabla final usamos la misma query que en la anterior, con la salvedad de
 
 </details>
 	
-<p><strong> Como conclusión, y aunque la muestra es todavía pequeña, para que la hipótesis se confirma: Los equipos perdedores son más beneficiados por las decisiones arbitrales en los minutos finales de partido</strong>
+<p><strong> Como conclusión, y aunque la muestra es todavía pequeña, parece que la hipótesis se confirma: los equipos perdedores son más beneficiados por las decisiones arbitrales en los minutos finales de partido.</strong>
 	
 
 <br>
