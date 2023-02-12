@@ -80,6 +80,7 @@ El proceso de transformación por cada tabla fue el siguiente:
 
 <img src="https://github.com/CharlyKill7/Database-Project/blob/main/images/EERD_inicial.png" width="550" height="400" />
 
+
 - En la segunda url conseguimos un archivo xlsx, que también convertimos a DataFrame. Al no tener un índice, decidimos añadirlo. Después, como sólo necesitabamos la información de la primera jornada, eliminamos todas las filas correspondientes a otras fechas del campeonato. A continuación tomamos una decisión que afectó a todos nuestros DFs: unificar los nombres de los equipos bajo las siglas habituales (BAL, BUF, KC, NYG...), lo cual logramos mediante diccionarios con los cambios y la función .map. Una vez unificamos los nombres, añadimos dos columnas ('Winner' y 'Loser') al DF principal. 
 
 <br>
