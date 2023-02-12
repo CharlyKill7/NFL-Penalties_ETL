@@ -120,53 +120,63 @@ Para intentar comprobar esta teoría, he tirado las siguiente querys en MySQL:
 <br>
 
  ```
-SELECT  rental.customer_id, count(rental.customer_id) as Rentals
-FROM rental
- 
-LEFT JOIN customer ON rental.customer_id = customer.customer_id
- 
-GROUP BY rental.customer_id
- 
-ORDER BY Rentals desc
-LIMIT 5
+SELECT Beneficiary, Winner, COUNT(*) as Total
+FROM penalties_week_1_2022
+	
+WHERE `Time left` < 300 AND Quarter = 4
+GROUP BY Beneficiary, Winner
+ORDER BY Total DESC
+;
  ```
 
-![top_clientes_cantidad](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_clientes_cantidad.PNG)
+![beneficiary_winner](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_clientes_cantidad.PNG)
+		       
+En esta tabla podemos apreciar que, en la mayoría de casos, el beneficiario de una falta en los últimos cinco minutos de partido NO suele ser el ganador. Vamos un paso más allá en esa dirección.
 	
 </details>
 
 <details>
-<summary>LOS CLIENTES QUE MÁS GASTAN</summary>
+<summary>Beneficiary-Winner vs Beneficiary-Loser 4Q</summary>
 <br>
 
 ```
-SELECT  `customer id`, round(sum(Income),2) as 'Total Spent'
-FROM rental_master
- 
-GROUP BY `customer id`
- 
-ORDER BY 'Total Spent' desc
-LIMIT 5 
+SELECT
+  SUM(CASE WHEN Beneficiary = Winner THEN 1 ELSE 0 END) as Total_Coincidence,
+  SUM(CASE WHEN Beneficiary != Winner THEN 1 ELSE 0 END) as Total_No_Coincidence
+FROM penalties_week_1_2022
+
+WHERE `Time left` < 300 AND Quarter = 4
+;
  ```
 
-![top_clientes_income2](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_clientes_income2.PNG)
+![coinci_4](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_clientes_income2.PNG)
+		       
+En esta segunda tabla podemos comprobar que, aunque la muestra es pequeña, la hipótesis se cumple. En los últimos cinco minutos del último cuarto, las decisiones arbitrales son mayoritariamente favorables al equipo que termina perdiendo.
 
 </details>
 
 <details>
-<summary>LAS PELÍCULAS QUE MÁS SE ALQUILAN</summary>
+<summary>Beneficiary-Winner vs Beneficiary-Loser 1Q, 2Q y 3Q</summary>
 <br>
 
 ```
-SELECT  title, count(title) as Alquileres
-FROM rental_master
- 
-GROUP BY title
- 
-ORDER BY Alquileres DESC
-LIMIT 5
+SELECT
+  SUM(CASE WHEN Beneficiary = Winner THEN 1 ELSE 0 END) as Total_Coincidence,
+  SUM(CASE WHEN Beneficiary != Winner THEN 1 ELSE 0 END) as Total_No_Coincidence
+FROM penalties_week_1_2022
+
+WHERE Quarter != 4
+;
  ```
 
 ![top_pelis](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_pelis.png)
+	
+En esta tabla final usamos la misma query que en la anterior, con la salvedad de hacerlo para los cuartos 1, 2 y 3. Como podemos ver, durante los primeros tres cuartos la mayoría de las decisiones arbitrales benefician al a la postre ganador del encuentro. Esto no se cumple en el cuarto cuarto, como vimos en la query anterior.
+	
 
 </details>
+	
+<p><strong> Como conclusión, y aunque la muestra es todavía pequeña, para que la hipótesis se confirma: Los equipos perdedores son más beneficiados por las decisiones arbitrales en los minutos finales de partido</strong>
+	
+
+<br>
