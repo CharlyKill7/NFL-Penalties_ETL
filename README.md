@@ -1,6 +1,6 @@
 # W4 Project - ETL NFL Penalties
 
-![portada](https://github.com/CharlyKill7/Database-Project/blob/main/images/videoclub.jpg)
+![portada](https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/portada.jpg)
 
 ## Índice
 
