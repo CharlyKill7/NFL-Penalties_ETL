@@ -36,7 +36,7 @@ En primer lugar, hemos realizado un ejercicio analítico de numerosas páginas w
 <summary>https://www.nflpenalties.com/</summary>
 <br>
 
- ![nflpenalties](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
+ ![nflpenalties](https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/nflpenalties.png)
 
 </details>
 
@@ -44,7 +44,7 @@ En primer lugar, hemos realizado un ejercicio analítico de numerosas páginas w
 <summary>https://www.pro-football-reference.com/</summary>
 <br>
 
- ![profootballreference](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
+ ![profootballreference](https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/profootballreference.png)
 
 </details>
 
@@ -52,7 +52,7 @@ En primer lugar, hemos realizado un ejercicio analítico de numerosas páginas w
 <summary>https://www.profootballnetwork.com/</summary>
 <br>
 
- ![profootballnetwork](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
+ ![profootballnetwork](https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/profootballnetwork.png)
 
 </details>
 
@@ -77,14 +77,14 @@ El proceso de transformación por cada tabla fue el siguiente:
 - En la primera url obtuvimos un primer DataFrame gracias al web scrapping y la librería Selenium. Una vez obtenido el DF, optamos por mantenerlo intacto hasta después de conectarlo con la información de las otras dos url. Finalmente, una vez enriquecida esta nuestra tabla principal, decidimos eliminar unas cuantas columnas cuya información, aunque interesante, no parecía valiosa para nuestro objetivo ("Player", "Declined", "Offsetting"...). También rellenamos algunos de los valores vacíos de la columna 'Pos' con NP (No position). La columna 'Time', con los minutos y segundos restantes de partido la tranformamos en segundos y la llamamos 'Time left'. Finalmente ajustamos el tipo de dato para optimizar el Dataframe.
 
 <br>
-<img src="https://github.com/CharlyKill7/Database-Project/blob/main/images/EERD_inicial.png" width="550" height="400" />
+<img src="https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/df.png" width="550" height="400" />
 <br>
 <br>
 
 - En la segunda url conseguimos un archivo xlsx, que también convertimos a DataFrame. Al no tener un índice, decidimos añadirlo. Después, como sólo necesitabamos la información de la primera jornada, eliminamos todas las filas correspondientes a otras fechas del campeonato. A continuación tomamos una decisión que afectó a todos nuestros DFs: unificar los nombres de los equipos bajo las siglas habituales (BAL, BUF, KC, NYG...), lo cual logramos mediante diccionarios con los cambios y la función .map. Una vez unificamos los nombres, añadimos dos columnas ('Winner' y 'Loser') al DF principal. 
 
 <br>
-<img src="https://github.com/CharlyKill7/Database-Project/blob/main/images/EERD_inicial.png" width="550" height="400" />
+<img src="https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/df2.png" width="550" height="400" />
 <br>
 <br>
 
@@ -92,7 +92,7 @@ El proceso de transformación por cada tabla fue el siguiente:
 
 
 <br>
-<img src="https://github.com/CharlyKill7/Database-Project/blob/main/images/EERD_inicial.png" width="550" height="400" />
+<img src="https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/df3.png" width="550" height="400" />
 
 <a name="carga"/>
 
@@ -102,7 +102,7 @@ Una vez finalizada la transformación de los datos, obtuvimos un único DataFram
 
 <br>
 
-![penalties_week_1_2022](https://github.com/CharlyKill7/Database-Project/blob/main/images/inventory_master.png)
+![penalties_week_1_2022](https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/penalties_week_1_2022.png)
 
 </details>
 
@@ -131,7 +131,7 @@ ORDER BY Total DESC
 ;
  ```
 
-![beneficiary_winner](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_clientes_cantidad.PNG)
+![beneficiary_winner](https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/beneficiary_winner.png)
 		       
 En esta tabla podemos apreciar que, en la mayoría de casos, el beneficiario de una falta en los últimos cinco minutos de partido NO suele ser el ganador. Vamos un paso más allá en esa dirección.
 	
@@ -151,7 +151,7 @@ WHERE `Time left` < 300 AND Quarter = 4
 ;
  ```
 
-![coinci_4](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_clientes_income2.PNG)
+![coinci_4](https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/coinci_4.png)
 		       
 En esta segunda tabla podemos comprobar que, aunque la muestra es pequeña, la hipótesis se cumple. En los últimos cinco minutos del último cuarto, las decisiones arbitrales son mayoritariamente favorables al equipo que termina perdiendo.
 
@@ -171,7 +171,7 @@ WHERE Quarter != 4
 ;
  ```
 
-![coinci_no4](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_pelis.png)
+![coinci_no4](https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/coinci_no4.png)
 	
 En esta tabla final usamos la misma query que en la anterior, con la salvedad de hacerlo para los cuartos 1, 2 y 3. Como podemos ver, durante los primeros tres cuartos la mayoría de las decisiones arbitrales benefician al a la postre ganador del encuentro. Esto no se cumple en el cuarto cuarto, como vimos en la query anterior.
 	
