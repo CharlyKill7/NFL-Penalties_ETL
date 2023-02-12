@@ -23,7 +23,7 @@ En este proyecto habremos de efectuar un proceso completo de ETL, las siglas en 
 
 ### Objetivo:
  
-Nuestro objetivo es encontrar tres fuents de datos distintas sobre las señalizaciones arbitrales en la NFL, de tal modo que podamos generar un DataFrame rico y completo a través de cual podamos sacar conclusiones al respecto. En este sentido, trabajaremos en la transformación del dato crudo para su adaptación al resto de las fuentes, con el fin de establecer una base de datos SQL con los resultados, pudiendo lanzar queries que nos ayuden a confirmar o refutar las hipótesis que se nos ocurran.
+Nuestro objetivo es encontrar tres fuentes de datos distintas sobre las señalizaciones arbitrales en la NFL, de tal modo que podamos generar un DataFrame rico y completo a través del cual podamos sacar conclusiones al respecto. En este sentido, trabajaremos en la transformación del dato crudo para su adaptación al resto de las fuentes, con el fin de establecer una base de datos SQL con los resultados, pudiendo lanzar queries que nos ayuden a confirmar o refutar las hipótesis que planteemos.
 
  
  <a name="extracción"/>
@@ -62,17 +62,19 @@ En primer lugar, hemos realizado un ejercicio analítico de numerosas páginas w
 
 Para la primera url, el proceso de extracción consistió en hacer web scrapping, utilizando la librería selenium. Tras conseguir tanto los nombres de columna como los datos, mediante la librería pandas generamos nuestro DataFrame principal. A partir de este, la idea fue extraer datos que pudieran complementar los ya existentes.
 
-Explorando la tabla **INVENTORY** vimos que había mil películas inventariadas, y a través de **film_id** descubrimos que se correspondían con las primeras **223** películas de la tabla **FILMS**. En otras palabras, en nuestro inventario **sólo había películas con títulos de la ‘A’ a la ‘D’**. Esto nos hizo sospechar que tal vez la información estuviera incompleta.
+Como en la primera url conseguimos los datos de "Penalties" de la primera jornada, decidimos completar esa tabla con una columna que devolviera al ganador del partido en cuestión, de modo que pudieramos comprobar la incidencia arbitral en el éxito deportivo. Para ello descargamos un archivo boxscore en formato xlsx con el ganador y perdedor del partido en cuestión, entre otros datos. 
 
+Finalmente decidimos comprobar la incidencia del horario en las decisiones arbitrales, pues existe una creencia popular que asocia los partidos de "prime time" con un número mayor de señalizaciones, ya que los colegiados aparecen más en pantalla cuando se televisa a todo el país. Para ello extraimos un archivo .csv con el "schedule" de la primera jornada.
 
-Poco después, durante el análisis de la tabla **RENTAL**, nos percatamos de que la columna **inventory_id** contenía valores por encima de los mil de la tabla **INVENTORY** (hasta el **4581**). Es decir, en nuestro videoclub se habían estado alquilando películas que no figuraban en inventario. Así nos convencimos de que nuestra hipótesis era correcta.
 
 
  <a name="transformación"/>
  
 ## Transformación
 
-Nuestra intención siempre fue simplificar, además de profesionalizar, el manejo del videoclub. Para ello, decidimos quedarnos con las tablas que solo fueran indispensables, a pesar de que todas ellas proporcionaban alguna información valiosa. A continuación, detallamos el proceso de selección para nuestra base de datos:
+El proceso de transformación por cada tabla fue el siguiente:
+
+- En la primera url obtuvimos un primer DataFrame gracias al web scrapping y la librería Selenium. Una vez obtenido el DF, optamos por mantenerlo intacto hasta después de conectarlo con la información de las otras dos url. Finalmente, una vez enriquecida esta nuestra tabla principal, decidimos eliminar unas cuantas columnas cuya información, aunque interesante, no parecía valiosa para nuestro objetivo ("Player", "Declined", "Offsetting"...). También rellenamos algunos de los valores vacíos de la columna 'Pos' con NP (No position). La columna 'Time', con los minutos y segundos restantes de partido la tranformamos en segundos y la llamamos 'Time left'. Finalmente ajustamos el tipo de dato para optimizar el Dataframe.
 
 
 <br>
