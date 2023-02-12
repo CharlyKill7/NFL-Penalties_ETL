@@ -77,14 +77,14 @@ El proceso de transformación por cada tabla fue el siguiente:
 - En la primera url obtuvimos un primer DataFrame gracias al web scrapping y la librería Selenium. Una vez obtenido el DF, optamos por mantenerlo intacto hasta después de conectarlo con la información de las otras dos url. Finalmente, una vez enriquecida esta nuestra tabla principal, decidimos eliminar unas cuantas columnas cuya información, aunque interesante, no parecía valiosa para nuestro objetivo ("Player", "Declined", "Offsetting"...). También rellenamos algunos de los valores vacíos de la columna 'Pos' con NP (No position). La columna 'Time', con los minutos y segundos restantes de partido la tranformamos en segundos y la llamamos 'Time left'. Finalmente ajustamos el tipo de dato para optimizar el Dataframe.
 
 <br>
-<img src="https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/df.png" width="550" height="400" />
+<img src="https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/df.png" />
 <br>
 <br>
 
 - En la segunda url conseguimos un archivo xlsx, que también convertimos a DataFrame. Al no tener un índice, decidimos añadirlo. Después, como sólo necesitabamos la información de la primera jornada, eliminamos todas las filas correspondientes a otras fechas del campeonato. A continuación tomamos una decisión que afectó a todos nuestros DFs: unificar los nombres de los equipos bajo las siglas habituales (BAL, BUF, KC, NYG...), lo cual logramos mediante diccionarios con los cambios y la función .map. Una vez unificamos los nombres, añadimos dos columnas ('Winner' y 'Loser') al DF principal. 
 
 <br>
-<img src="https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/df2.png" width="550" height="400" />
+<img src="https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/df2.png" />
 <br>
 <br>
 
@@ -92,7 +92,7 @@ El proceso de transformación por cada tabla fue el siguiente:
 
 
 <br>
-<img src="https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/df3.png" width="550" height="400" />
+<img src="https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/df3.png" />
 
 <a name="carga"/>
 
