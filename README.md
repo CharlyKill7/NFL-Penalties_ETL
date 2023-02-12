@@ -2,7 +2,7 @@
 
 ![portada](https://github.com/CharlyKill7/Database-Project/blob/main/images/videoclub.jpg)
 
-## ⛓️ Índice
+## Índice
 
 1. [Descripción](#descripción)
 2. [Extracción](#extracción)
@@ -98,47 +98,11 @@ El proceso de transformación por cada tabla fue el siguiente:
 
 ## Carga
 
-<details>
-<summary>INVENTORY_MASTER</summary>
+Una vez finalizada la transformación de los datos, obtuvimos un único DataFrame que exportar a MySQL. Para ello, creamos la base de datos "nflpenalties" y diseñamos su EERD correspondiente. Tras un hacer Forward Engineer creamos la tabla "penalties_week_1_2022", en un principio vacía. Después, mediante SQLAlchemy realizamos la exportación y rellenamos dicha tabla, finalizando así el proceso de carga. 
+
 <br>
- 
- 
-<details>
-<summary>Si alquilamos la película cuyo id de inventario es 1...</summary>
-<br>
- 
-```
- INSERT INTO rental (rental_id, rental_date, inventory_id, customer_id, return_date, staff_id)
- 
- VALUES (1002, '2005-05-31 00:55:00', 1, 588, '', 2);
-  ```
 
-
-</details>
- 
-![inventory_master](https://github.com/CharlyKill7/Database-Project/blob/main/images/inventory_master.png)
-
-</details>
-
-<details>
-<summary>CUSTOMER_MASTER</summary>
-<br>
- 
- ```
-SELECT customer.customer_id AS 'CUSTOMER ID', name AS 'NAME', lastname AS 'LAST NAME', telephone AS TELEPHONE, 
-	   mail AS EMAIL, round(sum((rental_rate * (DATEDIFF(return_date, rental_date) + 1))), 2) AS 'TOTAL SPENT',
-       GROUP_CONCAT(' ',title) AS 'FILMS RENTED'
-       
-FROM rental
-
-LEFT JOIN inventory ON inventory.inventory_id = rental.inventory_id
-LEFT JOIN films ON inventory.film_id = films.film_id
-LEFT JOIN customer ON customer.customer_id = rental.customer_id
-
-GROUP BY customer.customer_id, name , lastname, telephone, mail
-;
- ```
-![customer_master](https://github.com/CharlyKill7/Database-Project/blob/main/images/customer_master.png)
+![penalties_week_1_2022](https://github.com/CharlyKill7/Database-Project/blob/main/images/inventory_master.png)
 
 </details>
 
