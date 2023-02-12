@@ -169,7 +169,7 @@ WHERE Quarter != 4
 ;
  ```
 
-![top_pelis](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_pelis.png)
+![coinci_no4](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_pelis.png)
 	
 En esta tabla final usamos la misma query que en la anterior, con la salvedad de hacerlo para los cuartos 1, 2 y 3. Como podemos ver, durante los primeros tres cuartos la mayoría de las decisiones arbitrales benefician al a la postre ganador del encuentro. Esto no se cumple en el cuarto cuarto, como vimos en la query anterior.
 	
