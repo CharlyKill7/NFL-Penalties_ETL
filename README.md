@@ -76,25 +76,20 @@ El proceso de transformación por cada tabla fue el siguiente:
 
 - En la primera url obtuvimos un primer DataFrame gracias al web scrapping y la librería Selenium. Una vez obtenido el DF, optamos por mantenerlo intacto hasta después de conectarlo con la información de las otras dos url. Finalmente, una vez enriquecida esta nuestra tabla principal, decidimos eliminar unas cuantas columnas cuya información, aunque interesante, no parecía valiosa para nuestro objetivo ("Player", "Declined", "Offsetting"...). También rellenamos algunos de los valores vacíos de la columna 'Pos' con NP (No position). La columna 'Time', con los minutos y segundos restantes de partido la tranformamos en segundos y la llamamos 'Time left'. Finalmente ajustamos el tipo de dato para optimizar el Dataframe.
 
-
 <br>
 <img src="https://github.com/CharlyKill7/Database-Project/blob/main/images/EERD_inicial.png" width="550" height="400" />
-
-
+<br>
 
 - En la segunda url conseguimos un archivo xlsx, que también convertimos a DataFrame. Al no tener un índice, decidimos añadirlo. Después, como sólo necesitabamos la información de la primera jornada, eliminamos todas las filas correspondientes a otras fechas del campeonato. A continuación tomamos una decisión que afectó a todos nuestros DFs: unificar los nombres de los equipos bajo las siglas habituales (BAL, BUF, KC, NYG...), lo cual logramos mediante diccionarios con los cambios y la función .map. Una vez unificamos los nombres, añadimos dos columnas ('Winner' y 'Loser') al DF principal. 
 
-
 <br>
 <img src="https://github.com/CharlyKill7/Database-Project/blob/main/images/EERD_inicial.png" width="550" height="400" />
-
-
+<br>
 
 - En la tercera url descargamos un archivo csv con el los horarios por jornada de los partidos, que también convertimos a DataFrame. Entonces aplicamos alguns métodos básicos de la librería Pandas para renombrar las columnas, eliminar duplicados, valores nulos y columnas sin interés, además de unificar los nombres como para el DF anterior. Finalmente, generamos una columna extra 'Prime Time' (YES/NO) para cada partido, la cual añadimos al DF principal para obtener nuestra tabla final.
 
 
 <br>
-
 <img src="https://github.com/CharlyKill7/Database-Project/blob/main/images/EERD_inicial.png" width="550" height="400" />
 
 <a name="carga"/>
@@ -118,9 +113,10 @@ La hipótesis principal que me ha llevado a elegir esta temática para mi ETL Pr
 
 <p><strong> Los árbitros tienden a buscar un final igualado, y por tanto benefician al equipo que va por debajo en el marcador.</strong>
 
+Para intentar comprobar esta teoría, he tirado las siguiente querys en MySQL:
 
 <details>
-<summary>LOS CLIENTES QUE MÁS ALQUILAN</summary>
+<summary>Relación Beneficiary-Winner</summary>
 <br>
 
  ```
