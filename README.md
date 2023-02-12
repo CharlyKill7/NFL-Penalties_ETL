@@ -52,7 +52,7 @@ En primer lugar, hemos realizado un ejercicio analítico de numerosas páginas w
 <summary>https://www.profootballnetwork.com/</summary>
 <br>
 
-<img src="https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/profootballnetwork.png" width="550" height="400" />
+<img src="https://github.com/CharlyKill7/NFL-Penalties_ETL/blob/main/images/profootballnetwork.png" width="700" height="600" />
 
 </details>
 
