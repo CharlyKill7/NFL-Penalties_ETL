@@ -1,336 +1,184 @@
-# W3 Project - Building mySQL Data-base
+# W4 Project - ETL NFL Penalties
 
 ![portada](https://github.com/CharlyKill7/Database-Project/blob/main/images/videoclub.jpg)
 
-## ⛓️ Índice
+## Índice
 
-1.[✍️ Descripción](#descripción)\
-2.[🤓 Análisis general y limpieza](#análisis)\
-3.[🗂️ Database](#database)\
-4.[🧬 Transformación](#transformación)\
-5.[📊 BONUS: Consultas](#consultas)
+1. [Descripción](#descripción)
+2. [Extracción](#extracción)
+3. [Transformación](#transformación)
+4. [Carga](#carga)
+5. [BONUS: Consultas y conclusión](#consultas)
 
 
 <a name="descripción"/>
 
-## ✍️ Descripción
+## Descripción del proyecto
 
-En este proyecto tenemos que limpiar siete .csv provenientes de un negocio de videoclub, y adaptar las tablas para su exportación a MySQL, con el fin de generar una nueva base de datos mucho más óptima.
+En este proyecto habremos de efectuar un proceso completo de ETL, las siglas en inglés de Extract, Transform y Load. Los datos a extraer serán de nuestra elección, pero habrá que cumplir ciertos requerimientos. En este caso, vamos a extraer datos y hacer un pequeño análisis acerca de las decisiones arbitrales en la NFL.
 
-**Las tablas que tenemos inicialmente:**
+### Restricciones:
+- Obtener la información de tres fuentes distintas (urls).
+- Dos métodos distintos de extracción (csv, excel, api, rss, web scrapping...).
 
-<details>
-<summary>FILM</summary>
-<br>
-
- 12 columnas describiendo los atributos más importantes de cada CD, desde el nombre de la película, hasta el lenguaje, el contenido adicional y los costes de alquiler.
+### Objetivo:
  
-![films](https://github.com/CharlyKill7/Database-Project/blob/main/images/films.png)
+Nuestro objetivo es encontrar tres fuentes de datos distintas sobre las señalizaciones arbitrales en la NFL, de tal modo que podamos generar un DataFrame rico y completo a través del cual podamos sacar conclusiones al respecto. En este sentido, trabajaremos en la transformación del dato crudo para su adaptación al resto de las fuentes, con el fin de establecer una base de datos SQL con los resultados, pudiendo lanzar queries que nos ayuden a confirmar o refutar las hipótesis que planteemos.
 
-</details>
-
-<details>
-<summary>ACTORS</summary>
-<br>
-
-ID del actor, nombres y apellidos de los actores.
-<br>
-<br>
-![Actors](https://github.com/CharlyKill7/Database-Project/blob/main/images/Actors.png)
-
-</details>
-
-<details>
-<summary>CATEGORY</summary>
-<br>
-
-ID de categoria, nombre de categoria (comedia, aventura, romance)
-<br>
-<br>
-![category](https://github.com/CharlyKill7/Database-Project/blob/main/images/category.png)
-
-</details>
-
-<details>
-<summary>INVENTORY</summary>
-<br>
-
-ID de inventario, ID de pelicula, ID Tienda
-<br>
-<br>
-![inventory](https://github.com/CharlyKill7/Database-Project/blob/main/images/inventory.png)
-
-</details>
-
-<details>
-<summary>LANGUAGE</summary>
-<br>
-
-ID de lenguaje, nombre de lenguaje (Ingles, Italiano, etc)
-<br>
-<br>
-![language](https://github.com/CharlyKill7/Database-Project/blob/main/images/language.png)
-
-</details>
-
-<details>
-<summary>OLD_HDD</summary>
-<br>
-
-Nombre y apellido de los actores, ID de inventario, titulos de peliculas donde aparece el respectivo actor o actriz
-<br>
-<br>
-![oldhdd](https://github.com/CharlyKill7/Database-Project/blob/main/images/oldhdd.png)
-
-</details>
-
-<details>
-<summary>RENTAL</summary>
-<br>
-
-ID de alquiler, fecha de alquiler, fecha de retorno, ID de inventario, ID de cliente, ID del staff
-<br>
-<br>
-
-![rental](https://github.com/CharlyKill7/Database-Project/blob/main/images/rental.png)
-
-</details>
-
- ### Objetivo:
  
-Nuestro objetivo es construir y proporcionar al cliente una base de datos consistente pero sencilla de manejar, intentando que las diferentes tablas finales se correspondan con las fichas operativas del negocio. Así, según la parcela de actividad que se esté realizando, el personal encargado podrá rellenar todos los datos de la misma en una única tabla.
-
-
-Gracias a las relaciones establecidas entre las tablas, el cliente podrá ejecutar una serie de consultas para obtener información relevante y actualizada del videoclub.
+ <a name="extracción"/>
  
- 
- <a name="análisis"/>
- 
-## 🤓 Análisis general y limpieza
+## Extracción
 
-En primer lugar hemos realizado un ejercicio analítico de cada uno de los siete CSV que nos han proporcionado utilizando las técnicas más comunes como son `.head`,`.tail`,`.info`, `.shape`, `.columns` y `.value_counts`  para obtener información general de cada CSV. El objetivo de esta tarea consiste en verificar que las columnas estén limpias, tengan sentido, y encontrar inconsistencias. Durante este proceso, encontramos las siguientes incongruencias:
+En primer lugar, hemos realizado un ejercicio analítico de numerosas páginas web, incluyendo Kaggle o Google Dataset Search. Al no encontrar ningún dataset que se ajustara al objetivo, ampliamos la búsqueda a cualquier url que pudiera proporcionar la información requerida. Durante este proceso, encontramos las siguientes tablas:
 
 <details>
-<summary>¿ACTRIZ DUPLICADA?</summary>
+<summary>https://www.nflpenalties.com/</summary>
 <br>
 
- ![susan](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
+ ![nflpenalties](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
 
 </details>
 
 <details>
-<summary>¿RELEASE DATE INCORRECTO?</summary>
+<summary>https://www.pro-football-reference.com/</summary>
 <br>
 
-Notamos que la columna **release_year**, la fecha de estreno de las películas, indica **2006** para todas las pelis.
-<br>
-Pero en las fechas de los alquileres: 
-```
-year = []
-for i in ren.rental_date:
-    year.append(i[0:4])
-set(year) 
-```
-**2005**
-<br>
-<br>
-Al ser todos los alquileres previos a 2006, concluimos que la columna **release_year** está incorrectamente introducida y por tanto la vaciamos.
-
+ ![profootballreference](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
 
 </details>
+
 <details>
-<summary>¿FALTA UN RENTAL ID?</summary>
+<summary>https://www.profootballnetwork.com/</summary>
 <br>
 
-![susan](https://github.com/CharlyKill7/Database-Project/blob/main/images/rental_head.png)
-<br>
-
-Como se puede observar, la diferencia entre **id** y **rental_id** pasa de ser **+1** al principio a **+2** al final, por lo que se intuye que se han saltado un rental_id.
-<br>
- 
- Para obtener dicho **rental_id**:
-```
-print(list(ren.rental_id[ren.index==ren.rental_id -1])[-1])
-```
- **320**
-```
-print(list(ren.rental_id[ren.index==ren.rental_id -2])[0])
-```
- **322**
- <br>
- <br>
-... por lo que sabemos que **falta el rental_id nº 321**
-
+ ![profootballnetwork](https://github.com/CharlyKill7/Database-Project/blob/main/images/Susandavis.png)
 
 </details>
 
-<br>
-
-**¿Qué películas tenemos?**
 
 
-Explorando la tabla **INVENTORY** vimos que había mil películas inventariadas, y a través de **film_id** descubrimos que se correspondían con las primeras **223** películas de la tabla **FILMS**. En otras palabras, en nuestro inventario **sólo había películas con títulos de la ‘A’ a la ‘D’**. Esto nos hizo sospechar que tal vez la información estuviera incompleta.
+**Proceso de extracción**
+
+Para la primera url, el proceso de extracción consistió en hacer web scrapping, utilizando la librería selenium. Tras conseguir tanto los nombres de columna como los datos, mediante la librería pandas generamos nuestro DataFrame principal. A partir de este, la idea fue extraer datos que pudieran complementar los ya existentes.
+
+Como en la primera url conseguimos los datos de "Penalties" de la primera jornada, decidimos completar esa tabla con una columna que devolviera al ganador del partido en cuestión, de modo que pudieramos comprobar la incidencia arbitral en el éxito deportivo. Para ello descargamos un archivo boxscore en formato xlsx con el ganador y perdedor del partido en cuestión, entre otros datos. 
+
+Finalmente decidimos comprobar la incidencia del horario en las decisiones arbitrales, pues existe una creencia popular que asocia los partidos de "prime time" con un número mayor de señalizaciones, ya que los colegiados aparecen más en pantalla cuando se televisa a todo el país. Para ello extraimos un archivo .csv con el "schedule" de la primera jornada.
 
 
-Poco después, durante el análisis de la tabla **RENTAL**, nos percatamos de que la columna **inventory_id** contenía valores por encima de los mil de la tabla **INVENTORY** (hasta el **4581**). Es decir, en nuestro videoclub se habían estado alquilando películas que no figuraban en inventario. Así nos convencimos de que nuestra hipótesis era correcta.
 
-
- <a name="database"/>
+ <a name="transformación"/>
  
-## 🗂️ Database
+## Transformación
 
-Nuestra intención siempre fue simplificar, además de profesionalizar, el manejo del videoclub. Para ello, decidimos quedarnos con las tablas que solo fueran indispensables, a pesar de que todas ellas proporcionaban alguna información valiosa. A continuación, detallamos el proceso de selección para nuestra base de datos:
+El proceso de transformación por cada tabla fue el siguiente:
 
-
-- La tabla **FILM** es, presumiblemente, el catálogo, y por tanto nos pareció interesante mantenerla íntegra ya que supone el listado principal de películas de nuestro videoclub.
-- La tabla **OLD_HDD** contenía información que relacionaba ciertos actores con ciertos largometrajes, la cual decidimos añadir a la tabla anterior para poder desechar ésta.
-- La tabla **LANGUAGE** proveía datos sobre los posibles idiomas de las películas, por lo que también decidimos integrar esta información en Films, sustituyendo la columna numérica **language_id** por el idioma correspondiente.
-- La tabla **CATEGORY** recibió el mismo tratamiento que la anterior, emplazando en una nueva columna de Film el género de cada película.
-- La tabla **INVENTORY** proporcionaba información interesante, puesto que nos permitía relacionar la cinta de vídeo física con el título correspondiente.
-- La tabla **RENTAL** fue sin duda una de las más reveladoras, ya que nos permitió descubrir que había un inventario faltante, además de señalarnos datos tan importantes para el negocio como identificadores por cliente o número de días por alquiler.
-- La tabla **CUSTOMER** no existía entre nuestros .csv, pero nos pareció conveniente incorporarla a la base de datos del futuro negocio.
-- En la mayoría de las tablas encontramos una columna llamada Last update que no ofrecía datos relevantes, pues todos sus valores eran equivalentes para cada una de las tablas.
+- En la primera url obtuvimos un primer DataFrame gracias al web scrapping y la librería Selenium. Una vez obtenido el DF, optamos por mantenerlo intacto hasta después de conectarlo con la información de las otras dos url. Finalmente, una vez enriquecida esta nuestra tabla principal, decidimos eliminar unas cuantas columnas cuya información, aunque interesante, no parecía valiosa para nuestro objetivo ("Player", "Declined", "Offsetting"...). También rellenamos algunos de los valores vacíos de la columna 'Pos' con NP (No position). La columna 'Time', con los minutos y segundos restantes de partido la tranformamos en segundos y la llamamos 'Time left'. Finalmente ajustamos el tipo de dato para optimizar el Dataframe.
 
 <br>
+<img src="https://github.com/CharlyKill7/Database-Project/blob/main/images/EERD_inicial.png" width="550" height="400" />
+<br>
+<br>
 
+- En la segunda url conseguimos un archivo xlsx, que también convertimos a DataFrame. Al no tener un índice, decidimos añadirlo. Después, como sólo necesitabamos la información de la primera jornada, eliminamos todas las filas correspondientes a otras fechas del campeonato. A continuación tomamos una decisión que afectó a todos nuestros DFs: unificar los nombres de los equipos bajo las siglas habituales (BAL, BUF, KC, NYG...), lo cual logramos mediante diccionarios con los cambios y la función .map. Una vez unificamos los nombres, añadimos dos columnas ('Winner' y 'Loser') al DF principal. 
+
+<br>
+<img src="https://github.com/CharlyKill7/Database-Project/blob/main/images/EERD_inicial.png" width="550" height="400" />
+<br>
+<br>
+
+- En la tercera url descargamos un archivo csv con el los horarios por jornada de los partidos, que también convertimos a DataFrame. Entonces aplicamos alguns métodos básicos de la librería Pandas para renombrar las columnas, eliminar duplicados, valores nulos y columnas sin interés, además de unificar los nombres como para el DF anterior. Finalmente, generamos una columna extra 'Prime Time' (YES/NO) para cada partido, la cual añadimos al DF principal para obtener nuestra tabla final.
+
+
+<br>
 <img src="https://github.com/CharlyKill7/Database-Project/blob/main/images/EERD_inicial.png" width="550" height="400" />
 
-<a name="transformación"/>
+<a name="carga"/>
 
-## 🧬 Transformación
+## Carga
 
-<details>
-<summary>INVENTORY_MASTER</summary>
-<br>
- 
-```
-SELECT inventory.inventory_id AS 'INVENTORY ID', film_id AS 'FILM ID', store_id AS 'STORE ID', 
-		CASE
-        WHEN rental_date IS NOT NULL AND return_date = '' AND rental.inventory_id IS NOT NULL THEN 'NOT AVAILABLE'
-        ELSE 'AVAILABLE'
-    END AS AVAILABILITY
+Una vez finalizada la transformación de los datos, obtuvimos un único DataFrame que exportar a MySQL. Para ello, creamos la base de datos "nflpenalties" y diseñamos su EERD correspondiente. Tras un hacer Forward Engineer creamos la tabla "penalties_week_1_2022", en un principio vacía. Después, mediante SQLAlchemy realizamos la exportación y rellenamos dicha tabla, finalizando así el proceso de carga. 
 
-FROM inventory
-
-LEFT JOIN rental ON rental.inventory_id = inventory.inventory_id
-; 
- ```
- 
-<details>
-<summary>Si alquilamos la película cuyo id de inventario es 1...</summary>
-<br>
- 
-```
- INSERT INTO rental (rental_id, rental_date, inventory_id, customer_id, return_date, staff_id)
- 
- VALUES (1002, '2005-05-31 00:55:00', 1, 588, '', 2);
-  ```
-
-
-</details>
- 
-![inventory_master](https://github.com/CharlyKill7/Database-Project/blob/main/images/inventory_master.png)
-
-</details>
-
-<details>
-<summary>RENTAL_MASTER</summary>
 <br>
 
-```
-SELECT rental_id AS RENTALS, rental_date AS 'RENTAL DATE', rental.inventory_id AS 'INVENTORY ID', customer_id AS 'CUSTOMER ID', 
-	   return_date AS 'RETURN DATE', staff_id AS 'STAFF ID', title as TITLE, 
-       (DATEDIFF(return_date, rental_date) + 1) AS DAYS,
-       (rental_rate * (DATEDIFF(return_date, rental_date) + 1)) AS INCOME
-       
-FROM rental
-LEFT JOIN inventory ON inventory.inventory_id = rental.inventory_id
-LEFT JOIN films ON inventory.film_id = films.film_id
-; 
- ```
-![rental_master](https://github.com/CharlyKill7/Database-Project/blob/main/images/rental_master.png)
- 
-</details>
-
-<details>
-<summary>CUSTOMER_MASTER</summary>
-<br>
- 
- ```
-SELECT customer.customer_id AS 'CUSTOMER ID', name AS 'NAME', lastname AS 'LAST NAME', telephone AS TELEPHONE, 
-	   mail AS EMAIL, round(sum((rental_rate * (DATEDIFF(return_date, rental_date) + 1))), 2) AS 'TOTAL SPENT',
-       GROUP_CONCAT(' ',title) AS 'FILMS RENTED'
-       
-FROM rental
-
-LEFT JOIN inventory ON inventory.inventory_id = rental.inventory_id
-LEFT JOIN films ON inventory.film_id = films.film_id
-LEFT JOIN customer ON customer.customer_id = rental.customer_id
-
-GROUP BY customer.customer_id, name , lastname, telephone, mail
-;
- ```
-![customer_master](https://github.com/CharlyKill7/Database-Project/blob/main/images/customer_master.png)
+![penalties_week_1_2022](https://github.com/CharlyKill7/Database-Project/blob/main/images/inventory_master.png)
 
 </details>
 
 
 <a name="consultas"/>
 
-## 📊 BONUS: Consultas
+## 📊 BONUS: Consultas y conclusión
+
+La hipótesis principal que me ha llevado a elegir esta temática para mi ETL Project es la siguiente:
+
+<p><strong> Los árbitros tienden a buscar un final igualado, y por tanto benefician al equipo que va por debajo en el marcador.</strong>
+
+Para intentar comprobar esta teoría, he tirado las siguiente querys en MySQL:
 
 <details>
-<summary>LOS CLIENTES QUE MÁS ALQUILAN</summary>
+<summary>Relación Beneficiary-Winner</summary>
 <br>
 
  ```
-SELECT  rental.customer_id, count(rental.customer_id) as Rentals
-FROM rental
- 
-LEFT JOIN customer ON rental.customer_id = customer.customer_id
- 
-GROUP BY rental.customer_id
- 
-ORDER BY Rentals desc
-LIMIT 5
+SELECT Beneficiary, Winner, COUNT(*) as Total
+FROM penalties_week_1_2022
+	
+WHERE `Time left` < 300 AND Quarter = 4
+GROUP BY Beneficiary, Winner
+ORDER BY Total DESC
+;
  ```
 
-![top_clientes_cantidad](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_clientes_cantidad.PNG)
+![beneficiary_winner](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_clientes_cantidad.PNG)
+		       
+En esta tabla podemos apreciar que, en la mayoría de casos, el beneficiario de una falta en los últimos cinco minutos de partido NO suele ser el ganador. Vamos un paso más allá en esa dirección.
 	
 </details>
 
 <details>
-<summary>LOS CLIENTES QUE MÁS GASTAN</summary>
+<summary>Beneficiary-Winner vs Beneficiary-Loser 4Q</summary>
 <br>
 
 ```
-SELECT  `customer id`, round(sum(Income),2) as 'Total Spent'
-FROM rental_master
- 
-GROUP BY `customer id`
- 
-ORDER BY 'Total Spent' desc
-LIMIT 5 
+SELECT
+  SUM(CASE WHEN Beneficiary = Winner THEN 1 ELSE 0 END) as Total_Coincidence,
+  SUM(CASE WHEN Beneficiary != Winner THEN 1 ELSE 0 END) as Total_No_Coincidence
+FROM penalties_week_1_2022
+
+WHERE `Time left` < 300 AND Quarter = 4
+;
  ```
 
-![top_clientes_income2](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_clientes_income2.PNG)
+![coinci_4](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_clientes_income2.PNG)
+		       
+En esta segunda tabla podemos comprobar que, aunque la muestra es pequeña, la hipótesis se cumple. En los últimos cinco minutos del último cuarto, las decisiones arbitrales son mayoritariamente favorables al equipo que termina perdiendo.
 
 </details>
 
 <details>
-<summary>LAS PELÍCULAS QUE MÁS SE ALQUILAN</summary>
+<summary>Beneficiary-Winner vs Beneficiary-Loser 1Q, 2Q y 3Q</summary>
 <br>
 
 ```
-SELECT  title, count(title) as Alquileres
-FROM rental_master
- 
-GROUP BY title
- 
-ORDER BY Alquileres DESC
-LIMIT 5
+SELECT
+  SUM(CASE WHEN Beneficiary = Winner THEN 1 ELSE 0 END) as Total_Coincidence,
+  SUM(CASE WHEN Beneficiary != Winner THEN 1 ELSE 0 END) as Total_No_Coincidence
+FROM penalties_week_1_2022
+
+WHERE Quarter != 4
+;
  ```
 
-![top_pelis](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_pelis.png)
+![coinci_no4](https://github.com/CharlyKill7/Database-Project/blob/main/images/top_pelis.png)
+	
+En esta tabla final usamos la misma query que en la anterior, con la salvedad de hacerlo para los cuartos 1, 2 y 3. Como podemos ver, durante los primeros tres cuartos la mayoría de las decisiones arbitrales benefician al a la postre ganador del encuentro. Esto no se cumple en el cuarto cuarto, como vimos en la query anterior.
+	
 
 </details>
+	
+<p><strong> Como conclusión, y aunque la muestra es todavía pequeña, para que la hipótesis se confirma: Los equipos perdedores son más beneficiados por las decisiones arbitrales en los minutos finales de partido</strong>
+	
+
+<br>
